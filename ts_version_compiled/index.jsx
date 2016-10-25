@@ -2,10 +2,10 @@
 const React = require('react');
 const react_dom_1 = require('react-dom');
 const react_router_1 = require('react-router');
-const foo_1 = require('./routes/foo');
-console.log('FooRoute:', foo_1.default);
-const bar_1 = require('./routes/bar');
-console.log('BarRoute:', bar_1.default);
+const FooRoute = require('./routes/foo');
+console.log('FooRoute:', FooRoute);
+const BarRoute = require('./routes/bar');
+console.log('BarRoute:', BarRoute);
 function lazyLoadComponent(lazyModule) {
     console.log('lazyModule:', lazyModule);
     return (location, cb) => {
@@ -24,8 +24,8 @@ const RootRoute = () => (<div>
 react_dom_1.render((<div>
     <react_router_1.Router history={react_router_1.hashHistory}>
         <react_router_1.Route path="/" component={RootRoute}/>
-        <react_router_1.Route path="/foo" getComponent={lazyLoadComponent(foo_1.default)}/>
-        <react_router_1.Route path="/bar" getComponent={lazyLoadComponent(bar_1.default)}/>
+        <react_router_1.Route path="/foo" getComponent={lazyLoadComponent(FooRoute)}/>
+        <react_router_1.Route path="/bar" getComponent={lazyLoadComponent(BarRoute)}/>
     </react_router_1.Router>
   </div>), document.getElementById('app'));
 //# sourceMappingURL=index.jsx.map

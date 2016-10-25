@@ -2,9 +2,9 @@ import * as React from 'react';
 import {render} from 'react-dom';
 import {Router, hashHistory, Route, Link} from 'react-router';
 
-import FooRoute from './routes/foo'
+import * as FooRoute from './routes/foo'
 console.log('FooRoute:', FooRoute)
-import BarRoute from './routes/bar'
+import * as BarRoute from './routes/bar'
 console.log('BarRoute:', BarRoute)
 
 function lazyLoadComponent(lazyModule) {

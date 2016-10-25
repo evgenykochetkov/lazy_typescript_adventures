@@ -6,7 +6,9 @@
   "scripts": {
     "js_version": "webpack-dev-server --inline --hot --history-api-fallback --port 3000 --config webpack.config.js_version.js",
     "ts_version": "webpack-dev-server --inline --hot --history-api-fallback --port 3001 --config webpack.config.ts_version.js",
-    "build_ts": "tsc --outDir compiled_ts"
+    "build_ts": "tsc --outDir ts_version_compiled",
+    "babelify_compiled_ts": "babel -d ts_version_compiled_babelified ./ts_version_compiled",
+    "babelify_js": "babel -d js_version_babelified ./js_version/"
   },
   "author": "",
   "license": "ISC",
