@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "sourceMap": true,
+    "jsx": "preserve",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": false,
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false
+  },
+  "filesGlob": [
+    "./ts_version/**/*.ts",
+    "./ts_version/**/*.tsx",
+    "!./node_modules/**"
+  ],
+  "exclude": [
+    "node_modules",
+    "static"
+  ]
+}
